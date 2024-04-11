@@ -6,7 +6,6 @@ def menu():
 2. Decode
 3. Quit""")
 
-
 option = 0
 while option != -1:
     menu()
@@ -20,7 +19,7 @@ while option != -1:
         print()
 
     elif option == 2:
-        decoded = ""
+        decoded = ''
         for i in range(len(encoded)):
             decoded += str((int(encoded[i]) - 3)%10)
         print(f"The encoded password is {encoded}, and the original password is {decoded}.")
