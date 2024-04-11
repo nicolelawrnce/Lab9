@@ -11,16 +11,20 @@ option = 0
 while option != -1:
     menu()
     option = int(input("Please enter an option: "))
-    password = input("Please enter your password to encode: ")
     if option == 1:
+        password = input("Please enter your password to encode: ")
         encoded = ""
         for i in range(len(password)):
-            encoded += str((int(password[i]) + 1))
+            encoded += str((int(password[i]) + 3))
         print("Your password has been encoded and stored!")
         print()
 
     elif option == 2:
-        continue
+        decoded = ""
+        for i in range(len(encoded)):
+            decoded += str((int(encoded[i]) - 3))
+        print(f"The encoded password is {encoded}, and the original password is {decoded}.")
+        print()
 
     elif option == 3:
         break
