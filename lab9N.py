@@ -15,14 +15,14 @@ while option != -1:
         password = input("Please enter your password to encode: ")
         encoded = ""
         for i in range(len(password)):
-            encoded += str((int(password[i]) + 3))
+            encoded += str((int(password[i]) + 3)%10)
         print("Your password has been encoded and stored!")
         print()
 
     elif option == 2:
         decoded = ""
         for i in range(len(encoded)):
-            decoded += str((int(encoded[i]) - 3))
+            decoded += str((int(encoded[i]) - 3)%10)
         print(f"The encoded password is {encoded}, and the original password is {decoded}.")
         print()
 
